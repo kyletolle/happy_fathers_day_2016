@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- For viewing the page on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Happy Father's Day 2016</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.6em;
+      font-weight: 400;
+      background-color: #fdfdfd;
+      color: #444;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    article {
+      margin-top: 0.5em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+      font-size: 3.0em;
+      line-height: 1.3em;
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 400;
+      margin: 0.25em;
+    }
+
+    body.small {
+      background: #fff;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    body.large {
+      background: #2172E8;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .small h1 {
+      color: #FFF;
+      text-shadow: 1px  1px 1px #2172E8,
+                   1px -1px 1px #2172E8,
+                  -1px  1px 1px #2172E8,
+                  -1px -1px 1px #2172E8;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .small h2 {
+      color: #FFF;
+      text-shadow: 1px  1px 1px #2172E8,
+                   1px -1px 1px #2172E8,
+                  -1px  1px 1px #2172E8,
+                  -1px -1px 1px #2172E8;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .large h1 {
+      color: #fff;
+      text-shadow: 1px  1px 3px black,
+                   1px -1px 3px black,
+                  -1px  1px 3px black,
+                  -1px -1px 3px black;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .large h2 {
+      color: #fff;
+      text-shadow: 1px  1px 3px black,
+                   1px -1px 3px black,
+                  -1px  1px 3px black,
+                  -1px -1px 3px black;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6em;
+      text-align: center;
+    }
+
+    .small p {
+      color: #444;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+    .large p {
+      color: #FBFBFB;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    /* Inspiration from https://css-tricks.com/examples/hrs/ */
+    hr {
+      padding: 0;
+      border: none;
+      color: #333;
+      text-align: center;
+      margin: 1em;
+    }
+
+    .small hr {
+      border-top: medium double #2172E8;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .large hr {
+      border-top: medium double #fff;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+  </style>
+</head>
+<body class="small">
+  <article>
+    <h1>Happy Father's Day!</h1>
+    <h2>2016</h2>
+    <hr />
+    <p>Homeslice,</p>
+    <p>You're the best dad a kid could have!</p>
+    <p>Love, Kyle</p>
+  </article>
+  <script>
+    function updateTransition() {
+      var el = document.querySelector("body.small");
+
+      if (el) {
+        el.className = "large";
+      } else {
+        el = document.querySelector("body.large");
+        el.className = "small";
+      }
+
+      return el;
+    }
+
+    var intervalID = window.setInterval(updateTransition, 2000);
+  </script>
+</body>
+</html>
