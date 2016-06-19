@@ -37,19 +37,19 @@
       margin: 0.25em;
     }
 
-    body.small {
+    body.one {
       background: #fff;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
     }
 
-    body.large {
+    body.two {
       background: #2172E8;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
     }
 
-    .small h1 {
+    .one h1 {
       color: #FFF;
       text-shadow: 1px  1px 3px #2172E8,
                    1px -1px 3px #2172E8,
@@ -59,7 +59,7 @@
       transition: all 1s ease;
     }
 
-    .small h2 {
+    .one h2 {
       color: #FFF;
       text-shadow: 1px  1px 3px #2172E8,
                    1px -1px 3px #2172E8,
@@ -69,7 +69,7 @@
       transition: all 1s ease;
     }
 
-    .large h1 {
+    .two h1 {
       color: #fff;
       text-shadow: 1px  1px 3px black,
                    1px -1px 3px black,
@@ -79,7 +79,7 @@
       transition: all 1s ease;
     }
 
-    .large h2 {
+    .two h2 {
       color: #fff;
       text-shadow: 1px  1px 3px black,
                    1px -1px 3px black,
@@ -95,12 +95,12 @@
       text-align: center;
     }
 
-    .small p {
+    .one p {
       color: #444;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
     }
-    .large p {
+    .two p {
       color: #FBFBFB;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
@@ -115,13 +115,13 @@
       margin: 1em;
     }
 
-    .small hr {
+    .one hr {
       border-top: medium double #2172E8;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
     }
 
-    .large hr {
+    .two hr {
       border-top: medium double #fff;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
@@ -129,7 +129,7 @@
 
   </style>
 </head>
-<body class="small">
+<body class="one">
   <article>
     <h1>Happy Father's Day!</h1>
     <h2>2016</h2>
@@ -140,13 +140,13 @@
   </article>
   <script>
     function updateTransition() {
-      var el = document.querySelector("body.small");
+      var el = document.querySelector("body.one");
 
       if (el) {
-        el.className = "large";
+        el.className = "two";
       } else {
-        el = document.querySelector("body.large");
-        el.className = "small";
+        el = document.querySelector("body.two");
+        el.className = "one";
       }
 
       return el;
